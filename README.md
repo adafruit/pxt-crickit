@@ -1,4 +1,4 @@
-# crickit
+# crickit [![Build Status](https://travis-ci.org/adafruit/pxt-crickit.svg?branch=master)](https://travis-ci.org/adafruit/pxt-crickit)
 
 ## ~ hint
 

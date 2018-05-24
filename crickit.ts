@@ -4,7 +4,13 @@
  */
 //% weight=90 color="#03AA74" icon="\uf111"
 namespace crickit {
-    const dev = new seesaw.Seesaw();
+    let dev: seesaw.Seesaw;
+
+    function saw(): seesaw.Seesaw {
+        if (!dev)
+            dev = new seesaw.Seesaw();
+        return dev;
+    }
 
     /**
      * A speed picker
@@ -37,6 +43,7 @@ namespace crickit {
         //% weight=100
         //% blockId=sawmotorrun block="run %motor at %speed=motorSpeedPicker \\%"
         run(speed: number) {
+            const dev = saw();
             speed = Math.clamp(-100, 100, speed);
             let pwm = Math.abs((speed * (1 << 15) / 100) | 0);
             if (speed > 0) {

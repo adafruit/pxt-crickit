@@ -17,9 +17,5 @@
     "testDependencies": {
         "circuit-playground": "*"
     },
-    "public": true,
-    "targetVersions": {
-        "target": "1.1.21",
-        "pxt": "3.16.8"
-    }
+    "public": true
 }

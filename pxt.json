@@ -1,7 +1,7 @@
 {
     "name": "crickit",
     "version": "0.0.0",
-    "description": "",
+    "description": "MakeCode support for Adafruit CRICKIT",
     "license": "MIT",
     "dependencies": {
         "core": "*",
@@ -9,7 +9,6 @@
     },
     "files": [
         "README.md",
-        "dal.d.ts",
         "main.ts"
     ],
     "testFiles": [

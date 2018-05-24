@@ -9,7 +9,7 @@
     },
     "files": [
         "README.md",
-        "main.ts"
+        "crickit.ts"
     ],
     "testFiles": [
         "test.ts"

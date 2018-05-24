@@ -4,7 +4,8 @@
     "description": "",
     "license": "MIT",
     "dependencies": {
-        "core": "*"
+        "core": "*",
+        "seesaw": "github:adafruit/pxt-seesaw#v0.0.5"
     },
     "files": [
         "README.md",

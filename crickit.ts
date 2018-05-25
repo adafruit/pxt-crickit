@@ -67,7 +67,6 @@ namespace crickit {
                 this._inverted = inverted;
             }
         }
-
     }
 
     //% fixedInstance block="motor 1"
@@ -75,4 +74,17 @@ namespace crickit {
 
     //% fixedInstance block="motor 2"
     export const motor2 = new Motor(2, [22, 23]);
+
+    /**
+     * Make a robot drive forward, backward, turn, or stop. 
+     * @param speedLeft the speed on the left motor, eg: 50
+     * @param speedRight the speed on the right motor, eg: 50
+     */
+    //% blockId=crickitmotortank block="tank %speed1=speedPicker|\\% %speed2=speedPicker|\\%"
+    //% weight=96 blockGap=8
+    //% group="Motors"
+    export function tank(speed1: number, speed2: number) {
+        crickit.motor1.run(speed1);
+        crickit.motor2.run(speed2);
+    }
 }

@@ -12,17 +12,6 @@ namespace crickit {
         return dev;
     }
 
-    /**
-     * A speed picker
-     * @param speed the speed, eg: 50
-     */
-    //% blockId=motorSpeedPicker block="%speed" shim=TD_ID
-    //% speed.min=-100 speed.max=100
-    //% weight=0 blockHidden=1 speed.fieldOptions.decompileLiterals=1
-    export function __speedPicker(speed: number): number {
-        return speed;
-    }
-
     //% fixedInstances
     export class Motor {
         private _id: number;
@@ -41,7 +30,7 @@ namespace crickit {
          */
         //% group="Motors"
         //% weight=100
-        //% blockId=sawmotorrun block="run %motor at %speed=motorSpeedPicker \\%"
+        //% blockId=sawmotorrun block="run %motor at %speed=speedPicker \\%"
         run(speed: number) {
             const dev = saw();
             speed = Math.clamp(-100, 100, speed);

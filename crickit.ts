@@ -4,6 +4,25 @@
  */
 //% weight=90 color="#03AA74" icon="\uf111"
 namespace crickit {
+	export enum Signals {
+		//% block="S1"
+		S1 = 2,
+		//% block="S2"
+		S2 = 3,
+		//% block="S3"
+		S3 = 40,
+		//% block="S4"
+		S4 = 41,
+		//% block="S5"
+		S5 = 11,
+		//% block="S6"
+		S6 = 10,
+		//% block="S7"
+		S7 = 9,
+		//% block="S8"
+		S8 = 8
+	}
+	
     let dev: seesaw.Seesaw;
 
     function saw(): seesaw.Seesaw {
@@ -70,10 +89,10 @@ namespace crickit {
     }
 
     //% fixedInstance block="motor 1"
-    export const motor1 = new Motor(1, [18, 19]);
+    export const motor1 = new Motor(1, [22, 23]);
 
     //% fixedInstance block="motor 2"
-    export const motor2 = new Motor(2, [22, 23]);
+    export const motor2 = new Motor(2, [18, 19]);
 
     /**
      * Make a robot drive forward, backward, turn, or stop. 
@@ -86,5 +105,17 @@ namespace crickit {
     export function tank(speed1: number, speed2: number) {
         crickit.motor1.run(speed1);
         crickit.motor2.run(speed2);
+    }
+	
+	 /**
+     * Set a signal value to either 0 or 1.
+    * @param name signal to write to
+    * @param value value to set on the pin
+    */
+    //% blockId=crickit_set_digital_pin block="digital write|signal %name|to %value=toggleHighLow"
+    export function digitalWrite(name: crickit.Signals, value: boolean) {
+        const dev2 = saw();
+        dev2.pinMode(name, 1);
+        dev2.digitalWrite(name, value);
     }
 }

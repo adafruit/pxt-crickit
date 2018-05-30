@@ -1,6 +1,6 @@
 namespace crickit {
-    const CRICKIT_PWM_MIN = 0;
-    const CRICKIT_PWM_MAX = 65535;
+    export const CRICKIT_PWM_MIN = 0;
+    export const CRICKIT_PWM_MAX = 65535;
 
     //% fixedInstances
     export class Drive {

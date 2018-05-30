@@ -47,7 +47,7 @@ namespace crickit {
             value = value | 0;
             value = Math.clamp(0, 20000, value);
             value = (3.2767 * value) | 0;
-            value = Math.clamp(SERVO_DC_MIN, SERVO_DC_MAX, value);
+            value = Math.clamp(CRICKIT_PWM_MIN, CRICKIT_PWM_MAX, value);
             dev.setPwmFreq(this._pin, 50);
             dev.analogWrite(this._pin, value);
         }

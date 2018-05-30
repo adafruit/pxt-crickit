@@ -44,7 +44,6 @@ namespace crickit {
         //% servo.fieldOptions.width=220
         //% servo.fieldOptions.columns=2
         run(speed: number): void {
-            const dev = saw();
             this.setAngle(Math.map(speed, -100, 100, 0, 180));
         }        
 

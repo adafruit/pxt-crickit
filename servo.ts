@@ -17,11 +17,11 @@ namespace crickit {
          */
         //% group="Servos"
         //% weight=100
-        //% blockId=sawservosetangle block="crickit set %pin angle to %value=number"
+        //% blockId=sawservosetangle block="crickit set %servo angle to %value"
         //% value.min=0 value.max=180
-        //% pin.fieldEditor="gridpicker"
-        //% pin.fieldOptions.width=220
-        //% pin.fieldOptions.columns=2
+        //% servo.fieldEditor="gridpicker"
+        //% servo.fieldOptions.width=220
+        //% servo.fieldOptions.columns=2
         setAngle(value: number) {
             const dev = saw();
             value = value | 0;

@@ -17,7 +17,7 @@ namespace crickit {
          */
         //% group="Drives"
         //% weight=100
-        //% blockId=driveanalogwrite block="crickit set %pin value to %value=number"
+        //% blockId=driveanalogwrite block="analog write pin %pin to %value"
         //% value.min=0 value.max=1023
         //% pin.fieldEditor="gridpicker"
         //% pin.fieldOptions.width=220
@@ -35,14 +35,15 @@ namespace crickit {
          * set the drive frequency
          */
         //% group="Drives"
-        //% weight=100
-        //% blockId=drivesetfreq block="crickit set %pin frequency to %value=number"
+        //% weight=10
+        //% blockId=drivesetfreq block="crickit set %pin frequency to %value"
         //% value.min=0 value.max=2000
         //% pin.fieldEditor="gridpicker"
         //% pin.fieldOptions.width=220
         //% pin.fieldOptions.columns=2
         setFrequency(value: number) {
             const dev = saw();
+            value = Math.clamp(0, 2000, value);
             dev.setPwmFreq(this._pin, value);
         }
     }

@@ -22,6 +22,7 @@ namespace crickit {
         //% servo.fieldEditor="gridpicker"
         //% servo.fieldOptions.width=220
         //% servo.fieldOptions.columns=2
+        //% blockGap=8
         setAngle(value: number) {
             const dev = saw();
             value = value | 0;

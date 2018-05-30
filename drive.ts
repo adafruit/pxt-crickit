@@ -24,6 +24,7 @@ namespace crickit {
         //% pin.fieldOptions.columns=2
         analogWrite(value: number) {
             const dev = saw();
+            value = value | 0;
             value = Math.clamp(0, 1023, value);
             value = Math.map(value, 0, 1023, CRICKIT_PWM_MIN, CRICKIT_PWM_MAX);
             value = Math.clamp(CRICKIT_PWM_MIN, CRICKIT_PWM_MAX, value);

@@ -24,6 +24,7 @@ namespace crickit {
         //% pin.fieldOptions.columns=2
         setAngle(value: number) {
             const dev = saw();
+            value = value | 0;
             value = Math.clamp(0, 180, value);
             value = Math.map(value, 0, 180, SERVO_DC_MIN, SERVO_DC_MAX);
             value = Math.clamp(SERVO_DC_MIN, SERVO_DC_MAX, value);

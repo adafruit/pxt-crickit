@@ -28,6 +28,7 @@ namespace crickit {
          * Read a pin or connector as either 0 or 1
          * @param pin pin to read from
          */
+        //% group="Signals"
         //% blockId=sawpinread block="crickit digital read pin %pin" blockGap=8
         //% pin.fieldEditor="gridpicker"
         //% pin.fieldOptions.width=220
@@ -42,6 +43,7 @@ namespace crickit {
          * Read a pin or connector as a value from 0 to 1023
          * @param pin pin to read from
          */
+        //% group="Signals"
         //% blockId=sawpinreadanalog block="crickit analog read pin %pin" blockGap=8
         //% pin.fieldEditor="gridpicker"
         //% pin.fieldOptions.width=220

@@ -31,6 +31,18 @@ namespace crickit {
             dev.setPwmFreq(this._pin, 50);
             dev.analogWrite(this._pin, value);
         }
+
+        /**
+         * Set the throttle on a continuous servo
+         * @param throttle 
+         */
+        //% group="Servos"
+        //% weight=99
+        //% blockId=sawservorun block="crickit %servo run at %speed=speedPicker \\%"
+        run(speed: number): void {
+            const dev = saw();
+            this.setAngle(Math.map(speed, -100, 100, 0, 180));
+        }        
     }
 
     //% fixedInstance block="servo 1"

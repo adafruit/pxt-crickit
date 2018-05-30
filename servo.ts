@@ -38,7 +38,7 @@ namespace crickit {
          */
         //% group="Servos"
         //% weight=99
-        //% blockId=sawservorun block="crickit %servo run at %speed=speedPicker \\%"
+        //% blockId=sawservorun block="crickit continuous %servo run at %speed=speedPicker \\%"
         run(speed: number): void {
             const dev = saw();
             this.setAngle(Math.map(speed, -100, 100, 0, 180));

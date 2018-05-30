@@ -39,6 +39,7 @@ namespace crickit {
         //% group="Motors"
         //% weight=99
         //% blockId=sawmotorstop block="crickit stop %motor"
+        //% blockGap=8
         stop() {
             this.run(0);
         }

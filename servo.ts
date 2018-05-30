@@ -1,6 +1,6 @@
 namespace crickit {
-    export const SERVO_DC_MIN = 3277;
-    export const SERVO_DC_MAX = 6554;
+    const SERVO_DC_MIN = 3277;
+    const SERVO_DC_MAX = 6554;
 
     //% fixedInstances
     export class Servo {
@@ -17,7 +17,7 @@ namespace crickit {
          */
         //% group="Servos"
         //% weight=100
-        //% blockId=sawservosetangle block="crickit set %pin angle to %value=toggleHighLow"
+        //% blockId=sawservosetangle block="crickit set %pin angle to %value=number"
         //% value.min=0 value.max=180
         //% pin.fieldEditor="gridpicker"
         //% pin.fieldOptions.width=220
@@ -25,7 +25,7 @@ namespace crickit {
         setAngle(value: number) {
             const dev = saw();
             value = Math.clamp(0, 180, value);
-            value = Math.map(value, 0, 180, crickit.SERVO_DC_MIN, crickit.SERVO_DC_MAX);
+            value = Math.map(value, 0, 180, SERVO_DC_MIN, SERVO_DC_MAX);
             value = Math.clamp(SERVO_DC_MIN, SERVO_DC_MAX, value);
             dev.setPwmFreq(this._pin, 50);
             dev.analogWrite(this._pin, value);

@@ -22,6 +22,7 @@ namespace crickit {
         //% servo.fieldEditor="gridpicker"
         //% servo.fieldOptions.width=220
         //% servo.fieldOptions.columns=2
+        //% blockGap=8
         setAngle(value: number) {
             const dev = saw();
             value = value | 0;
@@ -33,6 +34,20 @@ namespace crickit {
         }
 
         /**
+         * Set the throttle on a continuous servo
+         * @param speed the throttle of the motor from -100% to 100%
+         */
+        //% group="Servos"
+        //% weight=99
+        //% blockId=sawservorun block="crickit continuous %servo run at %speed=speedPicker \\%"
+        //% servo.fieldEditor="gridpicker"
+        //% servo.fieldOptions.width=220
+        //% servo.fieldOptions.columns=2
+        run(speed: number): void {
+            this.setAngle(Math.map(speed, -100, 100, 0, 180));
+        }        
+
+        /*
          * set the pulse width to the servo in microseconds
          */
         //% group="Servos"

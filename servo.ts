@@ -31,6 +31,26 @@ namespace crickit {
             dev.setPwmFreq(this._pin, 50);
             dev.analogWrite(this._pin, value);
         }
+
+        /**
+         * set the pulse width to the servo in microseconds
+         */
+        //% group="Servos"
+        //% weight=10
+        //% blockId=sawservosetpulse block="crickit set %servo pulse to %value (μs)"
+        //% value.min=0 value.max=20000
+        //% servo.fieldEditor="gridpicker"
+        //% servo.fieldOptions.width=220
+        //% servo.fieldOptions.columns=2
+        setPulse(value: number) {
+            const dev = saw();
+            value = value | 0;
+            value = Math.clamp(0, 20000, value);
+            value = (3.2767 * value) | 0;
+            value = Math.clamp(SERVO_DC_MIN, SERVO_DC_MAX, value);
+            dev.setPwmFreq(this._pin, 50);
+            dev.analogWrite(this._pin, value);
+        }
     }
 
     //% fixedInstance block="servo 1"

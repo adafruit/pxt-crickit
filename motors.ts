@@ -19,6 +19,7 @@ namespace crickit {
         //% weight=100
         //% blockId=sawmotorrun block="crickit run %motor at %speed=speedPicker \\%"
         //% blockGap=8
+        //% speed.defl=50
         run(speed: number) {
             const dev = saw();
             speed = Math.clamp(-100, 100, speed);

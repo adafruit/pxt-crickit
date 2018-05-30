@@ -9,7 +9,9 @@
     },
     "files": [
         "README.md",
-        "crickit.ts"
+        "motors.ts",
+        "signals.ts",
+        "ns.ts"
     ],
     "testFiles": [
         "test.ts"

@@ -6,16 +6,23 @@ UNDER CONSTRUCTION
 
 ## ~
 
-## TODO
+## Motors
 
-- [ ] Add a reference for your blocks here
-- [ ] Add "icon.png" image (300x200) in the root folder
-- [ ] Add "- beta" to the GitHub project description if you are still iterating it.
-- [ ] Turn on your automated build on https://travis-ci.org
-- [ ] Use "pxt bump" to create a tagged release on GitHub
-- [ ] Get your package reviewed and approved https://makecode.adafruit.com/packages/approval
+### Run #crickitRun
 
-Read more at https://makecode.adafruit.com/packages/build-your-own
+Runs a motor at a particular power setting, in percent.
+
+```sig
+crickit.motor1.run(50)
+```
+
+### Stop ##crickitStopMotors
+
+Turns off the power on a motor.
+
+```sig
+crickit.motor1.stop()
+```
 
 ## License
 

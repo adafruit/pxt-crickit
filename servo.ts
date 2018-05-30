@@ -39,6 +39,9 @@ namespace crickit {
         //% group="Servos"
         //% weight=99
         //% blockId=sawservorun block="crickit continuous %servo run at %speed=speedPicker \\%"
+        //% servo.fieldEditor="gridpicker"
+        //% servo.fieldOptions.width=220
+        //% servo.fieldOptions.columns=2
         run(speed: number): void {
             const dev = saw();
             this.setAngle(Math.map(speed, -100, 100, 0, 180));

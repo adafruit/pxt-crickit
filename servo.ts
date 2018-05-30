@@ -34,7 +34,7 @@ namespace crickit {
 
         /**
          * Set the throttle on a continuous servo
-         * @param throttle 
+         * @param speed the throttle of the motor from -100% to 100%
          */
         //% group="Servos"
         //% weight=99

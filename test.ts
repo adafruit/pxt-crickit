@@ -4,7 +4,7 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
     )
     crickit.motor1.run(50)
     crickit.motor2.run(50)
-    crickit.signals1.digitalWrite(true)
+    crickit.signal1.digitalWrite(true)
 })
 input.buttonB.onEvent(ButtonEvent.Click, function () {
     light.showRing(
@@ -12,6 +12,6 @@ input.buttonB.onEvent(ButtonEvent.Click, function () {
     )
     crickit.motor1.run(-50)
     crickit.motor2.run(-50)
-    crickit.signals2.digitalWrite(true)
+    crickit.signal2.digitalWrite(true)
 })
 light.showAnimation(light.rainbowAnimation, 500)

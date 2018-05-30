@@ -19,6 +19,7 @@ namespace crickit {
         //% weight=100
         //% blockId=sawservosetangle block="crickit set %servo angle to %value"
         //% value.min=0 value.max=180
+        //% value.defl=90
         //% servo.fieldEditor="gridpicker"
         //% servo.fieldOptions.width=220
         //% servo.fieldOptions.columns=2
@@ -53,14 +54,15 @@ namespace crickit {
         //% group="Servos"
         //% weight=10
         //% blockId=sawservosetpulse block="crickit set %servo pulse to %value (μs)"
-        //% value.min=0 value.max=20000
+        //% value.min=500 value.max=2500
+        //% value.defl=1500
         //% servo.fieldEditor="gridpicker"
         //% servo.fieldOptions.width=220
         //% servo.fieldOptions.columns=2
         setPulse(value: number) {
             const dev = saw();
             value = value | 0;
-            value = Math.clamp(0, 20000, value);
+            value = Math.clamp(500, 2500, value);
             value = (3.2767 * value) | 0;
             value = Math.clamp(CRICKIT_PWM_MIN, CRICKIT_PWM_MAX, value);
             dev.setPwmFreq(this._pin, 50);

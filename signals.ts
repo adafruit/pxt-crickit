@@ -34,8 +34,21 @@ namespace crickit {
         //% pin.fieldOptions.columns=2
         digitalRead(): boolean {
             const dev = saw();
-            dev.pinMode(this._pin, 1); // TODO: correct code
+            dev.pinMode(this._pin, 0);
             return dev.digitalRead(this._pin);
+        }
+
+        /**
+         * Read a pin or connector as a value from 0 to 1023
+         * @param pin pin to read from
+         */
+        //% blockId=sawpinreadanalog block="crickit analog read pin %pin" blockGap=8
+        //% pin.fieldEditor="gridpicker"
+        //% pin.fieldOptions.width=220
+        //% pin.fieldOptions.columns=2
+        analogRead(): number {
+            const dev = saw();
+            return dev.analogRead(this._pin);
         }
     }
 

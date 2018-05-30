@@ -11,6 +11,9 @@
         "README.md",
         "motors.ts",
         "signals.ts",
+        "servo.ts",
+        "touch.ts",
+        "drive.ts",
         "ns.ts"
     ],
     "testFiles": [

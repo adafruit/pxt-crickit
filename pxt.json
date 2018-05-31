@@ -1,11 +1,11 @@
 {
     "name": "crickit",
-    "version": "0.0.14",
+    "version": "0.0.16",
     "description": "MakeCode support for Adafruit CRICKIT",
     "license": "MIT",
     "dependencies": {
         "core": "*",
-        "seesaw": "github:adafruit/pxt-seesaw#v0.0.9"
+        "seesaw": "github:adafruit/pxt-seesaw#v0.0.10"
     },
     "files": [
         "README.md",

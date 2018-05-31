@@ -11,7 +11,7 @@ namespace crickit {
     //% blockId=sawsetpixelcolor block="crickit set pixel color %rgb=colorNumberPicker"
     //% weight=99
     //% blockGap=8
-    export function setColor(color: number): void {
+    export function setPixelColor(color: number): void {
         if (brightness < 255)
             color = fade(color, brightness);
 
@@ -31,14 +31,24 @@ namespace crickit {
     }
 
     /**
+     * Turns off the NeoPixel
+     */
+    //% group="NeoPixel"
+    //% blockId=sawsetpixeloff block="crickit set pixel off"
+    //% weight=98
+    export function setPixelOff() {
+        this.setPixelColor(0);
+    }
+
+    /**
      * Set the brightness of the neopixel. This flag only applies to future operations.
      * @param brightness a measure of LED brightness in 0-255. eg: 20
      */
     //% group="NeoPixel"
     //% blockId="pixel_set_brightness" block="crickit set pixel brightness %brightness"
-    //% weight=98
+    //% weight=97
     //% brightness.min=0 brightness.max=255
-    export function setBrightness(brightness: number): void {
+    export function setPixelBrightness(brightness: number): void {
         brightness = Math.max(0, Math.min(0xff, brightness >> 0));
     }
     

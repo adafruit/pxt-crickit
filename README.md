@@ -1,28 +1,8 @@
 # crickit [![Build Status](https://travis-ci.org/adafruit/pxt-crickit.svg?branch=master)](https://travis-ci.org/adafruit/pxt-crickit)
 
-## ~ hint
+A MakeCode package to use the Adafruit CRICKIT motor shield.
 
-UNDER CONSTRUCTION
-
-## ~
-
-## Motors
-
-### Run #crickitRun
-
-Runs a motor at a particular power setting, in percent.
-
-```sig
-crickit.motor1.run(50)
-```
-
-### Stop ##crickitStopMotors
-
-Turns off the power on a motor.
-
-```sig
-crickit.motor1.stop()
-```
+* [Read the Full Guide at learn.adafruit.com](https://learn.adafruit.com/adafruit-crickit-creative-robotic-interactive-construction-kit/makecode)
 
 ## License
 

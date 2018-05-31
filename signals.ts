@@ -18,6 +18,7 @@ namespace crickit {
         //% pin.fieldEditor="gridpicker"
         //% pin.fieldOptions.width=220
         //% pin.fieldOptions.columns=2
+        //% blockGap=8
         digitalWrite(value: boolean) {
             const dev = saw();
             dev.pinMode(this._pin, 1);
@@ -29,7 +30,7 @@ namespace crickit {
          * @param pin pin to read from
          */
         //% group="Signals"
-        //% blockId=sawpinread block="crickit **digital read** pin %pin" blockGap=8
+        //% blockId=sawpinread block="crickit **digital read** %pin" blockGap=8
         //% pin.fieldEditor="gridpicker"
         //% pin.fieldOptions.width=220
         //% pin.fieldOptions.columns=2
@@ -44,7 +45,7 @@ namespace crickit {
          * @param pin pin to read from
          */
         //% group="Signals"
-        //% blockId=sawpinreadanalog block="crickit **analog read** pin %pin" blockGap=8
+        //% blockId=sawpinreadanalog block="crickit **analog read** %pin" blockGap=8
         //% pin.fieldEditor="gridpicker"
         //% pin.fieldOptions.width=220
         //% pin.fieldOptions.columns=2

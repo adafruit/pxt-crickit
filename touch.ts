@@ -15,7 +15,7 @@ namespace crickit {
          * @param pin pin to read from
          */
         //% group="Touch"
-        //% blockId=sawtouchread block="crickit touch read pin %pin" blockGap=8
+        //% blockId=sawtouchread block="crickit read %pin" blockGap=8
         //% pin.fieldEditor="gridpicker"
         //% pin.fieldOptions.width=220
         //% pin.fieldOptions.columns=2

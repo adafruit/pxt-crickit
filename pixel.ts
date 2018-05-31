@@ -8,7 +8,7 @@ namespace crickit {
      * @param color RGB color of the LED
      */
     //% group="NeoPixel"
-    //% blockId=sawsetpixelcolor block="crickit set color %rgb=colorNumberPicker"
+    //% blockId=sawsetpixelcolor block="crickit set pixel color %rgb=colorNumberPicker"
     //% weight=99
     //% blockGap=8
     export function setColor(color: number): void {
@@ -35,40 +35,17 @@ namespace crickit {
      * @param brightness a measure of LED brightness in 0-255. eg: 20
      */
     //% group="NeoPixel"
-    //% blockId="pixel_set_brightness" block="set brightness %brightness"
+    //% blockId="pixel_set_brightness" block="crickit set pixel brightness %brightness"
     //% weight=98
-    //% parts="pixel"
     //% brightness.min=0 brightness.max=255
     export function setBrightness(brightness: number): void {
         brightness = Math.max(0, Math.min(0xff, brightness >> 0));
     }
-
-    /**
-     * Converts red, green, blue channels into a RGB color
-     * @param red value of the red channel between 0 and 255. eg: 255
-     * @param green value of the green channel between 0 and 255. eg: 255
-     * @param blue value of the blue channel between 0 and 255. eg: 255
-     */
-    //% group="NeoPixel"
-    //% blockId=sawpixelrgb block="red %red|green %green|blue %blue"
-    //% red.min=0 red.max=255 green.min=0 green.max=255 blue.min=0 blue.max=255
-    //% weight=19
-    //% blockGap=8
-    export function rgb(red: number, green: number, blue: number): number {
+    
+    function rgb(red: number, green: number, blue: number): number {
         return ((red & 0xFF) << 16) | ((green & 0xFF) << 8) | (blue & 0xFF);
     }
-
-    /**
-     * Fade the color by the brightness
-     * @param color color to fade
-     * @param brightness the amount of brightness to apply to the color, eg: 128
-     */
-    //% group="NeoPixel"
-    //% blockId=sawpixelfade block="fade %color=pixel_colors|by %brightness"
-    //% brightness.min=0 brightness.max=255
-    //% weight=18
-    //% blockGap=8
-    export function fade(color: number, brightness: number): number {
+    function fade(color: number, brightness: number): number {
         brightness = Math.max(0, Math.min(255, brightness >> 0));
         if (brightness < 255) {
             let red = unpackR(color);

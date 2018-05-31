@@ -15,18 +15,18 @@ namespace crickit {
         if (brightness < 255)
             color = fade(color, brightness);
 
-        let red = unpackR(color);
-        let green = unpackG(color);
-        let blue = unpackB(color);
+        const offset = 0;
+        const red = unpackR(color);
+        const green = unpackG(color);
+        const blue = unpackB(color);
 
         const dev = saw();
-
         const buffer: Buffer = pins.createBufferFromArray([
-            0,
-            5,
+            offset >> 8, offset & 0xff,
             green,
             red,
-            blue]);
+            blue
+        ]);
         dev.neopixelSendBuffer(_CRICKIT_NEOPIXEL_PIN, buffer);
     }
 

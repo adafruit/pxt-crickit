@@ -20,6 +20,7 @@ namespace crickit {
         //% blockId=sawmotorrun block="crickit run %motor at %speed=speedPicker \\%"
         //% blockGap=8
         //% speed.defl=50
+        //% speed.min=-100 speed.max=100
         run(speed: number) {
             const dev = saw();
             speed = Math.clamp(-100, 100, speed);
@@ -73,6 +74,8 @@ namespace crickit {
     //% blockId=crickitmotortank block="crickit tank %speed1=speedPicker|\\% %speed2=speedPicker|\\%"
     //% weight=96
     //% group="Motors"
+    //% speed1.min=-100 speed1.max=100
+    //% speed2.min=-100 speed2.max=100
     export function tank(speed1: number, speed2: number) {
         crickit.motor1.run(speed1);
         crickit.motor2.run(speed2);

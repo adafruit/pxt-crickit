@@ -13,7 +13,7 @@ namespace crickit {
          * set the signal
          */
         //% group="Signals"
-        //% weight=100
+        //% weight=60
         //% blockId=sawpinwrite block="crickit digital write %pin|to %value=toggleHighLow"
         //% pin.fieldEditor="gridpicker"
         //% pin.fieldOptions.width=220
@@ -30,6 +30,7 @@ namespace crickit {
          * @param pin pin to read from
          */
         //% group="Signals"
+        //% weight=59
         //% blockId=sawpinread block="crickit digital read %pin" blockGap=8
         //% pin.fieldEditor="gridpicker"
         //% pin.fieldOptions.width=220
@@ -45,6 +46,7 @@ namespace crickit {
          * @param pin pin to read from
          */
         //% group="Signals"
+        //% weight=58
         //% blockId=sawpinreadanalog block="crickit analog read %pin" blockGap=8
         //% pin.fieldEditor="gridpicker"
         //% pin.fieldOptions.width=220

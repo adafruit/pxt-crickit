@@ -16,7 +16,7 @@ namespace crickit {
          * set the drive duty cycle
          */
         //% group="Drives"
-        //% weight=100
+        //% weight=70
         //% blockId=driveanalogwrite block="crickit analog write %pin|to %value"
         //% value.min=0 value.max=1023
         //% pin.fieldEditor="gridpicker"
@@ -35,7 +35,7 @@ namespace crickit {
          * set the drive frequency
          */
         //% group="Drives"
-        //% weight=10
+        //% weight=69
         //% blockId=drivesetfreq block="crickit set %pin|frequency to %value"
         //% value.min=0 value.max=2000
         //% pin.fieldEditor="gridpicker"

@@ -1,17 +1,10 @@
-input.buttonA.onEvent(ButtonEvent.Click, function () {
-    light.showRing(
-    "red red red red red red red red red red"
-    )
+for (let i = 0; i < 100; ++i) {
     crickit.motor1.run(50)
     crickit.motor2.run(50)
     crickit.signal1.digitalWrite(true)
-})
-input.buttonB.onEvent(ButtonEvent.Click, function () {
-    light.showRing(
-    `blue blue blue blue blue blue blue blue blue blue`
-    )
+    basic.pause(500)
     crickit.motor1.run(-50)
     crickit.motor2.run(-50)
     crickit.signal2.digitalWrite(true)
-})
-light.showAnimation(light.rainbowAnimation, 500)
+    basic.pause(500)
+}

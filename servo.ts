@@ -27,9 +27,7 @@ namespace crickit {
         setAngle(value: number) {
             const dev = saw();
             value = value | 0;
-            value = Math.clamp(0, 180, value);
-            value = Math.map(value, 0, 180, SERVO_DC_MIN, SERVO_DC_MAX);
-            value = Math.clamp(SERVO_DC_MIN, SERVO_DC_MAX, value);
+            value = mapClamp(value, 0, 180, SERVO_DC_MIN, SERVO_DC_MAX);
             dev.setPwmFreq(this._pin, 50);
             dev.analogWrite(this._pin, value);
         }
@@ -45,7 +43,7 @@ namespace crickit {
         //% servo.fieldOptions.width=220
         //% servo.fieldOptions.columns=2
         run(speed: number): void {
-            this.setAngle(Math.map(speed, -100, 100, 0, 180));
+            this.setAngle(mapClamp(speed, -100, 100, 0, 180));
         }        
 
         /*

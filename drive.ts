@@ -26,7 +26,7 @@ namespace crickit {
             const dev = saw();
             value = value | 0;
             value = Math.clamp(0, 1023, value);
-            value = Math.map(value, 0, 1023, CRICKIT_PWM_MIN, CRICKIT_PWM_MAX);
+            value = mapClamp(value, 0, 1023, CRICKIT_PWM_MIN, CRICKIT_PWM_MAX);
             value = Math.clamp(CRICKIT_PWM_MIN, CRICKIT_PWM_MAX, value);
             dev.analogWrite(this._pin, value);
         }

@@ -41,4 +41,10 @@ namespace crickit {
             _dev = new seesaw.Seesaw(crickitPinmap);
         return _dev;
     }
+
+    export function mapClamp(value: number, fromLow: number, fromHigh: number, toLow: number, toHigh: number): number {
+        value = Math.max(fromLow, Math.min(fromHigh, value));
+        const r = ((value - fromLow) * (toHigh - toLow)) / (fromHigh - fromLow) + toLow;
+        return Math.max(toLow, Math.min(toHigh, r));
+    }    
 }

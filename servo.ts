@@ -17,7 +17,7 @@ namespace crickit {
          */
         //% group="Servos"
         //% weight=100
-        //% blockId=sawservosetangle block="crickit set %servo angle to %value °"
+        //% blockId=sawservosetangle block="crickit set %servo|angle to %value|°"
         //% value.min=0 value.max=180
         //% value.defl=90
         //% servo.fieldEditor="gridpicker"
@@ -40,7 +40,7 @@ namespace crickit {
          */
         //% group="Servos"
         //% weight=99
-        //% blockId=sawservorun block="crickit continuous %servo run at %speed=speedPicker \\%"
+        //% blockId=sawservorun block="crickit continuous %servo|run at %speed=speedPicker|\\%"
         //% servo.fieldEditor="gridpicker"
         //% servo.fieldOptions.width=220
         //% servo.fieldOptions.columns=2
@@ -53,7 +53,7 @@ namespace crickit {
          */
         //% group="Servos"
         //% weight=10
-        //% blockId=sawservosetpulse block="crickit set %servo pulse to %value μs"
+        //% blockId=sawservosetpulse block="crickit set %servo|pulse to %value|μs"
         //% value.min=500 value.max=2500
         //% value.defl=1500
         //% servo.fieldEditor="gridpicker"

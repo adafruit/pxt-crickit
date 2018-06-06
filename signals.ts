@@ -14,7 +14,7 @@ namespace crickit {
          */
         //% group="Signals"
         //% weight=100
-        //% blockId=sawpinwrite block="crickit digital write %pin to %value=toggleHighLow"
+        //% blockId=sawpinwrite block="crickit digital write %pin|to %value=toggleHighLow"
         //% pin.fieldEditor="gridpicker"
         //% pin.fieldOptions.width=220
         //% pin.fieldOptions.columns=2

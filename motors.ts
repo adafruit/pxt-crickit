@@ -17,7 +17,7 @@ namespace crickit {
          */
         //% group="Motors"
         //% weight=100
-        //% blockId=sawmotorrun block="crickit run %motor at %speed=speedPicker \\%"
+        //% blockId=sawmotorrun block="crickit run %motor|at %speed=speedPicker \\%"
         //% blockGap=8
         //% speed.defl=50
         //% speed.min=-100 speed.max=100
@@ -49,7 +49,7 @@ namespace crickit {
          * Inverts the motor controls
          */
         //% group="Motors"
-        //% blockId=sawmotorinverted block="crickit set %motor inverted %inverted=toggleOnOff"
+        //% blockId=sawmotorinverted block="crickit set %motor|inverted %inverted=toggleOnOff"
         setInverted(inverted: boolean) {
             if (this._inverted != inverted) {
                 const tmp = this._pins[0];
@@ -71,7 +71,7 @@ namespace crickit {
      * @param speedLeft the speed on the left motor, eg: 50
      * @param speedRight the speed on the right motor, eg: 50
      */
-    //% blockId=crickitmotortank block="crickit tank %speed1=speedPicker|\\% %speed2=speedPicker|\\%"
+    //% blockId=crickitmotortank block="crickit tank %speed1=speedPicker|% %speed2=speedPicker|%"
     //% weight=96
     //% group="Motors"
     //% speed1.min=-100 speed1.max=100

@@ -45,7 +45,7 @@ namespace crickit {
      * @param brightness a measure of LED brightness in 0-255. eg: 20
      */
     //% group="NeoPixel"
-    //% blockId="pixel_set_brightness" block="crickit set pixel brightness %brightness"
+    //% blockId="sawsetbrightness" block="crickit set pixel brightness %brightness"
     //% weight=28
     //% brightness.min=0 brightness.max=255
     export function setPixelBrightness(brightness: number): void {

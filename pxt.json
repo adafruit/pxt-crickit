@@ -1,6 +1,6 @@
 {
     "name": "crickit",
-    "version": "0.0.19",
+    "version": "0.0.20",
     "description": "MakeCode support for Adafruit CRICKIT",
     "license": "MIT",
     "dependencies": {

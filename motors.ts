@@ -72,7 +72,7 @@ namespace crickit {
      * @param speedLeft the speed on the left motor, eg: 50
      * @param speedRight the speed on the right motor, eg: 50
      */
-    //% blockId=crickitmotortank block="crickit tank %speed1=speedPicker|%|%speed2=speedPicker|%"
+    //% blockId=crickitmotortank block="crickit tank %speed1=speedPicker|\\%|%speed2=speedPicker|\\%"
     //% weight=89
     //% group="Motors"
     //% speed1.min=-100 speed1.max=100

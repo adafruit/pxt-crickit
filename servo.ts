@@ -38,7 +38,7 @@ namespace crickit {
          */
         //% group="Servos"
         //% weight=99
-        //% blockId=sawservorun block="crickit continuous %servo|run at %speed=speedPicker|%"
+        //% blockId=sawservorun block="crickit continuous %servo|run at %speed=speedPicker|\\%"
         //% servo.fieldEditor="gridpicker"
         //% servo.fieldOptions.width=220
         //% servo.fieldOptions.columns=2

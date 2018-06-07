@@ -17,7 +17,7 @@ namespace crickit {
          */
         //% group="Servos"
         //% weight=100
-        //% blockId=sawservosetangle block="crickit set %servo angle to %value °"
+        //% blockId=sawservosetangle block="crickit set %servo|angle to %value|°"
         //% value.min=0 value.max=180
         //% value.defl=90
         //% servo.fieldEditor="gridpicker"
@@ -27,9 +27,7 @@ namespace crickit {
         setAngle(value: number) {
             const dev = saw();
             value = value | 0;
-            value = Math.clamp(0, 180, value);
-            value = Math.map(value, 0, 180, SERVO_DC_MIN, SERVO_DC_MAX);
-            value = Math.clamp(SERVO_DC_MIN, SERVO_DC_MAX, value);
+            value = mapClamp(value, 0, 180, SERVO_DC_MIN, SERVO_DC_MAX);
             dev.setPwmFreq(this._pin, 50);
             dev.analogWrite(this._pin, value);
         }
@@ -40,20 +38,20 @@ namespace crickit {
          */
         //% group="Servos"
         //% weight=99
-        //% blockId=sawservorun block="crickit continuous %servo run at %speed=speedPicker \\%"
+        //% blockId=sawservorun block="crickit continuous %servo|run at %speed=speedPicker|%"
         //% servo.fieldEditor="gridpicker"
         //% servo.fieldOptions.width=220
         //% servo.fieldOptions.columns=2
         run(speed: number): void {
-            this.setAngle(Math.map(speed, -100, 100, 0, 180));
+            this.setAngle(mapClamp(speed, -100, 100, 0, 180));
         }        
 
         /*
          * set the pulse width to the servo in microseconds
          */
         //% group="Servos"
-        //% weight=10
-        //% blockId=sawservosetpulse block="crickit set %servo pulse to %value μs"
+        //% weight=98
+        //% blockId=sawservosetpulse block="crickit set %servo|pulse to %value|μs"
         //% value.min=500 value.max=2500
         //% value.defl=1500
         //% servo.fieldEditor="gridpicker"
@@ -63,7 +61,7 @@ namespace crickit {
             const dev = saw();
             value = value | 0;
             value = Math.clamp(500, 2500, value);
-            value = (3.2767 * value) | 0;
+            value = ((32767 * value) / 1000) | 0;
             value = Math.clamp(CRICKIT_PWM_MIN, CRICKIT_PWM_MAX, value);
             dev.setPwmFreq(this._pin, 50);
             dev.analogWrite(this._pin, value);

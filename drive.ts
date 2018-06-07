@@ -16,8 +16,8 @@ namespace crickit {
          * set the drive duty cycle
          */
         //% group="Drives"
-        //% weight=100
-        //% blockId=driveanalogwrite block="crickit **analog write** %pin to %value"
+        //% weight=70
+        //% blockId=driveanalogwrite block="crickit analog write %pin|to %value"
         //% value.min=0 value.max=1023
         //% pin.fieldEditor="gridpicker"
         //% pin.fieldOptions.width=220
@@ -26,7 +26,7 @@ namespace crickit {
             const dev = saw();
             value = value | 0;
             value = Math.clamp(0, 1023, value);
-            value = Math.map(value, 0, 1023, CRICKIT_PWM_MIN, CRICKIT_PWM_MAX);
+            value = mapClamp(value, 0, 1023, CRICKIT_PWM_MIN, CRICKIT_PWM_MAX);
             value = Math.clamp(CRICKIT_PWM_MIN, CRICKIT_PWM_MAX, value);
             dev.analogWrite(this._pin, value);
         }
@@ -35,8 +35,8 @@ namespace crickit {
          * set the drive frequency
          */
         //% group="Drives"
-        //% weight=10
-        //% blockId=drivesetfreq block="crickit set %pin frequency to %value"
+        //% weight=69
+        //% blockId=drivesetfreq block="crickit set %pin|frequency to %value"
         //% value.min=0 value.max=2000
         //% pin.fieldEditor="gridpicker"
         //% pin.fieldOptions.width=220

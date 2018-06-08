@@ -17,8 +17,7 @@ namespace crickit {
          */
         //% group="Servos"
         //% weight=100
-        //% blockId=sawservosetangle block="crickit set %servo|angle to %value|°"
-        //% value.min=0 value.max=180
+        //% blockId=sawservosetangle block="crickit set %servo|angle to %value=protractorPicker|°"
         //% value.defl=90
         //% servo.fieldEditor="gridpicker"
         //% servo.fieldOptions.width=220

@@ -2,7 +2,7 @@
  * CRICKIT board support
  */
 //% weight=90 color="#03AA74" icon="\uf111"
-//% groups='["NeoPixel", "Servos", "Motors", "Drives", "Signals"]'
+//% groups='["Servos", "Motors", "Drives", "Signals", "NeoPixel"]'
 namespace crickit {
     const _ADC_INPUT_0_PIN_CRICKIT = 2
     const _ADC_INPUT_1_PIN_CRICKIT = 3

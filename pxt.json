@@ -15,6 +15,7 @@
         "touch.ts",
         "drive.ts",
         "pixel.ts",
+        "stepper.ts",
         "ns.ts"
     ],
     "testFiles": [

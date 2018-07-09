@@ -41,7 +41,7 @@ namespace crickit {
      * numbers move the motor in one direction, while negative numbers move the motor in the opposite direction.
      */
     //% group="Stepper"
-    //% blockId=sawstep block="crickit stepper move %count steps"
+    //% blockId=sawstep block="crickit motor stepper move %count steps"
     //% weight=100
     //% blockGap=8
     //% count.defl=10
@@ -73,9 +73,9 @@ namespace crickit {
      * Move the stepper motor on the drive pins a number of steps. Positive 
      * numbers move the motor in one direction, while negative numbers move the motor in the opposite direction.
      */
-    //% group="Drive Stepper"
+    //% group="Stepper"
     //% blockId=sawdrivestep block="crickit drive stepper move %count steps"
-    //% weight=100
+    //% weight=30
     //% blockGap=8
     //% count.defl=10
     export function driveStep(count: number): void {

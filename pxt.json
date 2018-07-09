@@ -5,7 +5,7 @@
     "license": "MIT",
     "dependencies": {
         "core": "*",
-        "seesaw": "github:Adafruit/pxt-seesaw#v0.0.15"
+        "seesaw": "github:Adafruit/pxt-seesaw#v0.0.16"
     },
     "files": [
         "README.md",

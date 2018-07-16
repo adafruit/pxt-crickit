@@ -64,7 +64,7 @@ namespace crickit {
                 dev.analogWrite(stepperPins[j], stepWaves[stepType][stepIndex][j])
             }
             if(stepType == 0){
-                pause(10)
+                basic.pause(10)
             }
         }
     }
@@ -97,7 +97,7 @@ namespace crickit {
                 dev.analogWrite(driveStepperPins[j], stepWaves[driveStepType][driveStepIndex][j])
             }
             if(driveStepIndex == 0){
-                pause(10)
+                basic.pause(10)
             }
         }
     }

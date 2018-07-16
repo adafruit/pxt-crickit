@@ -1,4 +1,11 @@
 namespace crickit {
+    function createBufferFromArray(bytes: number[]) {
+        let buf = pins.createBuffer(bytes.length)
+        for (let i = 0; i < bytes.length; ++i)
+            buf[i] = bytes[i]
+        return buf
+    }
+
     const _CRICKIT_NEOPIXEL_PIN = 27
 
     let brightness = 20;
@@ -21,7 +28,7 @@ namespace crickit {
         const blue = unpackB(color);
 
         const dev = saw();
-        const buffer: Buffer = pins.createBufferFromArray([
+        const buffer: Buffer = createBufferFromArray([
             offset >> 8, offset & 0xff,
             green,
             red,

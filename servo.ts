@@ -60,7 +60,7 @@ namespace crickit {
             const dev = saw();
             value = value | 0;
             value = Math.clamp(500, 2500, value);
-            value = ((32767 * value) / 1000) | 0;
+            value = ((3277 * value) / 1000) | 0;
             value = Math.clamp(CRICKIT_PWM_MIN, CRICKIT_PWM_MAX, value);
             dev.setPwmFreq(this._pin, 50);
             dev.analogWrite(this._pin, value);

@@ -23,7 +23,7 @@ namespace crickit {
         run(speed: number) {
             const dev = saw();
             speed = Math.clamp(-100, 100, speed);
-            let pwm = Math.abs((speed * (1 << 15) / 100) | 0);
+            let pwm = Math.abs((speed * (65535 / 100)) | 0);
             if (speed > 0) {
                 dev.analogWrite(this._pins[0], 0);
                 dev.analogWrite(this._pins[1], pwm);

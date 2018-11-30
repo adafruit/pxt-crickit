@@ -44,7 +44,7 @@ namespace crickit {
     //% blockId=sawsetpixeloff block="crickit set pixel off"
     //% weight=29
     export function setPixelOff() {
-        this.setPixelColor(0);
+        setPixelColor(0);
     }
 
     /**

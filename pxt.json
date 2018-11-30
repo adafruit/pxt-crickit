@@ -1,6 +1,6 @@
 {
     "name": "crickit",
-    "version": "0.0.31",
+    "version": "0.0.32",
     "description": "MakeCode support for Adafruit CRICKIT",
     "license": "MIT",
     "dependencies": {
@@ -24,6 +24,5 @@
     "testDependencies": {
         "circuit-playground": "*"
     },
-    "public": true,
-    "additionalFilePaths": []
+    "public": true
 }

@@ -13,7 +13,7 @@ namespace crickit {
          * set the signal
          */
         //% group="Signals"
-        //% weight=60
+        //% weight=61
         //% blockId=sawpinwrite block="crickit digital write %pin|to %value=toggleHighLow"
         //% pin.fieldEditor="gridpicker"
         //% pin.fieldOptions.width=220
@@ -23,6 +23,25 @@ namespace crickit {
             const dev = saw();
             dev.pinMode(this._pin, 1);
             dev.digitalWrite(this._pin, value);
+        }
+
+        /**
+         * set the pullup or pulldown internal resister
+         */
+        //% group="Signals"
+        //% weight=60
+        //% blockId=sawpinpullupdown block="set crickit pull pin %pin|to %value=toggleHighLow"
+        //% pin.fieldEditor="gridpicker"
+        //% pin.fieldOptions.width=220
+        //% pin.fieldOptions.columns=1
+        //% blockGap=8
+        pinPullupdown(value: boolean) {
+            const dev = saw();
+            if (value) {
+                dev.pinMode(this._pin, seesaw.Seesaw.INPUT_PULLUP);
+            } else {
+                dev.pinMode(this._pin, seesaw.Seesaw.INPUT_PULLDOWN);
+            }
         }
 
         /**

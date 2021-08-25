@@ -24,5 +24,13 @@
     "testDependencies": {
         "circuit-playground": "*"
     },
-    "public": true
+    "public": true,
+    "targetVersions": {
+        "target": "4.0.11",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "tsprj"
 }

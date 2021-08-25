@@ -13,7 +13,7 @@ namespace crickit {
         }
 
         /**
-         * set the drive duty cycle
+         * Set the drive duty cycle
          */
         //% group="Drives"
         //% weight=70
